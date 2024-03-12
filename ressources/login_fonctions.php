@@ -32,3 +32,12 @@ function user_exists(string $username){
     if ($user != []){return true;}
     return false;
 }
+
+function get_user(string $username){
+    $bdd = new BDD();
+    $search = $bdd->get_bdd()->prepare("SELECT * FROM users WHERE username = ? or email = ?");
+    $search->execute([$username, $username]);
+    $user = $search->fetchAll(PDO::FETCH_ASSOC);
+
+    return $user;
+}

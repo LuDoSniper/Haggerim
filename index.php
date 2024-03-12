@@ -1,15 +1,19 @@
 <?php
-    require_once 'ressources/bdd.php';
     require_once 'ressources/login_fonctions.php';
 
     session_start();
+
+    if (isset($_SESSION['user'])){
+        header("Location: home.php");
+    }
 
     $check = false;
     if (isset($_POST['id']) && isset($_POST['pw']) && !isset($_POST['create'])){
         $check = true;
 
         if (try_login($_POST['id'], $_POST['pw'])){
-            header("Location: test.php");
+            $_SESSION['user'] = get_user($_POST['id']);
+            header("Location: home.php");
         }
     }
 
