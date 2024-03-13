@@ -1,0 +1,139 @@
+@font-face{
+    font-family: 'Minecraft';
+    src: url(fonts/minecraft/minecraft_font.woff) format('woff');
+}
+
+*{
+    font-family: 'Minecraft';
+}
+
+#background{
+    position: absolute;
+    background-image: url(imgs/Logo_serveur_carre.png);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.blur{
+    background-image: url(imgs/Logo_serveur_carre.png);
+    background-size: cover;
+    position: absolute;
+    filter: blur(10px);
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    margin: 0;
+}
+
+header{
+    position: relative;
+    background-color: rgb(255, 255, 255, .3);
+    text-align: center;
+    padding: 5px 0;
+    padding-top: 7px;
+}
+
+header > img{
+    width: 200px;
+}
+
+header span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(imgs/grass_block.png);
+    background-size: cover;
+    background-position: center;
+    height: 38px;
+    width: 38px;
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    border-radius: 4px;
+}
+
+header span img{
+    width: 75%;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+header span img:hover{
+    width: 90%;
+}
+
+#body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.main-title{
+    display: inline-block;
+    background-image: url(imgs/dirt_block.png);
+    background-size: contain;
+    background-repeat: repeat;
+    position: relative;
+    z-index: 1;
+    border-radius: 8px;
+    box-shadow: inset 0px 0px 25px 6px rgba(0,0,0,0.6);
+    padding: 10px;
+    margin: 40px auto;
+}
+
+.main-title .noir{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 8px;
+}
+
+h1{
+    position: relative;
+    z-index: 2;
+    font-family: 'Minecraft';
+    color: white;
+    margin: 0;
+}
+
+h1 span{
+    font-family: 'Minecraft';
+    color: #5555ff;
+}
+
+#features{
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+#features button{
+    position: relative;
+    font-family: 'Minecraft';
+    color: white;
+    background-image: url(imgs/button.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    margin: 20px auto;
+    width: calc(200px * 2);
+    height: calc(20px * 2);
+}
+
+#features button:disabled{
+    background-image: url(imgs/button_disabled.png);
+    cursor: auto;
+}
+
+#features button:active:not(:disabled){
+    background-image: url(imgs/button_highlighted.png);
+}
