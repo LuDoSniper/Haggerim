@@ -35,7 +35,7 @@
         <div id="features">
             <button>Rejoindre Haggerim</button>
             <button>Gestion des royaumes</button>
-            <button disabled>Hall of Haggerim's beauty</button>
+            <button disabled>Hall of Haggerim's beauties</button>
             <button>Signaler un joueur</button>
         </div>
     </div>
