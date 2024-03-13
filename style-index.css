@@ -1,5 +1,10 @@
+@font-face{
+    font-family: 'Minecraft';
+    src: url(fonts/minecraft/minecraft_font.woff) format('woff');
+}
+
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Minecraft';
 }
 
 #background{
@@ -40,7 +45,9 @@ header img{
 #login_container{
     position: relative;
     z-index: 1;
-    background-color: white;
+    background-image: url(imgs/dirt_block.png);
+    background-repeat: repeat;
+    background-size: 25%;
     padding: 10px;
     padding-bottom: 30px;
     border-radius: 8px;
@@ -50,6 +57,28 @@ header img{
     max-width: 250px;
     width: 100%;
     text-align: center;
+}
+
+#login_container::before{
+    content: '';
+    background-color: rgb(0, 0, 0, 0.33);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+#login_container > *{
+    position: relative;
+    z-index: 1;
+}
+
+#login_container h1{
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: white;
 }
 
 #login_container #message{
@@ -63,11 +92,15 @@ header img{
     width: 75%;
     box-sizing: border-box;
     padding: 5px;
+    background-color: black;
+    color: rgb(216, 216, 216);
 }
 
 #login_container button{
+    position: relative;
     display: block;
-    background-color: rgb(64, 158, 245);
+    /* background-color: rgb(64, 158, 245); */
+    background-color: rgba(255, 255, 255, 0);
     color: white;
     border: none;
     border-radius: 4px;
@@ -75,7 +108,24 @@ header img{
     padding: 5px;
     font-size: 18px;
     margin: 5px auto;
-    width: 75%;
+    width: 76%;
+}
+
+#login_container button span{
+    position: relative;
+    z-index: 1;
+}
+
+#login_container button img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#login_container button:active img{
+    content: url(imgs/button_highlighted.png);
 }
 
 #login_container .buttons{

@@ -66,8 +66,14 @@
                 <input type="password" name="pw" placeholder="Mot de passe">
             </div>
             <div class="buttons">
-                <button>Se connecter</button>
-                <button name="create">Créer un compte</button>
+                <button>
+                    <img src="imgs/button.png" alt="">    
+                    <span>Se connecter</span>
+                </button>
+                <button name="create">
+                    <img src="imgs/button.png" alt="">
+                    <span>Creer un compte</span>
+                </button>
             </div>
         </form>
         <?php } elseif ($login === "sign up"){?>
@@ -80,8 +86,14 @@
                 <input type="password" name="password" placeholder="Mot de passe">
             </div>
             <div class="buttons">
-                <button>Créer un compte</button>
-                <button name="home">Retour</button>
+                <button>
+                    <img src="imgs/button.png" alt="">
+                    <span>Creer un compte</span>
+                </button>
+                <button name="home">
+                    <img src="imgs/button.png" alt="">
+                    <span>Retour</span>
+                </button>
             </div>
         </form>
         <?php }?>
