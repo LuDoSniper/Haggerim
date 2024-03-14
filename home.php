@@ -1,10 +1,19 @@
 <?php
     require_once "ressources/login_fonctions.php";
+    require_once "ressources/fonctions.php";
 
     session_start();
 
     if (!isset($_SESSION['user'])){
         header("Location: index.php");
+    }
+
+    if (!is_member($_SESSION['user']['ID'])){
+        $member = "not-member";
+        $state = "disabled";
+    } else {
+        $member = "";
+        $state = "enabled";
     }
 ?>
 
@@ -33,11 +42,15 @@
         </div>
 
         <div id="features">
-            <button>Rejoindre Haggerim</button>
-            <button>Gestion des royaumes</button>
-            <button disabled>Hall of Haggerim's beauties</button>
-            <button>Signaler un joueur</button>
+            <form action="join.php" method="post"><button>Rejoindre Haggerim</button></form>
+            <button class="info-bulle <?= $member ?>" <?= $state ?>>Gestion des royaumes</button>
+            <button class="info-bulle dev" disabled>Hall of Haggerim's beauties</button>
+            <button class="info-bulle <?= $member ?>" <?= $state ?>>Signaler un joueur</button>
         </div>
+
+        <div id="info-bulle"><span>Ceci est une info bulle</span></div>
     </div>
+
+    <script src="script-home.js"></script>
 </body>
 </html>

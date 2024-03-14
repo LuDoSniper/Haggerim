@@ -39,5 +39,5 @@ function get_user(string $username){
     $search->execute([$username, $username]);
     $user = $search->fetchAll(PDO::FETCH_ASSOC);
 
-    return $user;
+    return $user[0];
 }

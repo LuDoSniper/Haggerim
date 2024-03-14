@@ -1,10 +1,12 @@
-@font-face{
+@import url('https://fonts.cdnfonts.com/css/minecraftia');
+
+/* @font-face{
     font-family: 'Minecraft';
     src: url(fonts/minecraft/minecraft_font.woff) format('woff');
-}
+} */
 
 *{
-    font-family: 'Minecraft';
+    font-family: 'Minecraftia';
 }
 
 #background{

@@ -1,0 +1,230 @@
+@import url('https://fonts.cdnfonts.com/css/minecraftia');
+
+/* @font-face{
+    font-family: 'Minecraft';
+    src: url(fonts/minecraft/minecraft_font.woff) format('woff');
+} */
+
+*{
+    font-family: 'Minecraftia', sans-serif;
+}
+
+#background{
+    position: fixed;
+    background-image: url(imgs/Logo_serveur_carre.png);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.blur{
+    background-image: url(imgs/Logo_serveur_carre.png);
+    background-size: cover;
+    position: fixed;
+    filter: blur(10px);
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    margin: 0;
+}
+
+header{
+    position: sticky;
+    background-color: rgb(255, 255, 255, .3);
+    text-align: center;
+    padding: 5px 0;
+    padding-top: 7px;
+    top: 0;
+    z-index: 10;
+}
+
+header > img{
+    width: 200px;
+    cursor: pointer;
+}
+
+header span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(imgs/grass_block.png);
+    background-size: cover;
+    background-position: center;
+    height: 38px;
+    width: 38px;
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    border-radius: 4px;
+}
+
+header span img{
+    width: 75%;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+header span img:hover{
+    width: 90%;
+}
+
+#body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    position: relative;
+}
+
+.main-title{
+    display: inline-block;
+    background-image: url(imgs/dirt_block.png);
+    background-size: contain;
+    background-repeat: repeat;
+    position: relative;
+    z-index: 1;
+    border-radius: 8px;
+    box-shadow: inset 0px 0px 25px 6px rgba(0,0,0,0.6);
+    padding: 10px;
+    margin: 40px auto;
+}
+
+.noir{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 8px;
+}
+
+h1{
+    position: relative;
+    z-index: 2;
+    color: white;
+    margin: 0;
+}
+
+h1 span{
+    color: #5555ff;
+}
+
+#rules{
+    position: relative;
+    display: inline-block;
+    background-image: url(imgs/dirt_block.png);
+    background-size: 75px;
+    background-repeat: repeat;
+    border-radius: 8px;
+    max-width: 60%;
+    color: white;
+    box-shadow: inset 0px 0px 25px 6px rgba(0,0,0,0.6);
+    padding: 10px;
+}
+
+#rules .noir{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#rules ul{
+    position: relative;
+    z-index: 2;
+    padding-left: 15px;
+}
+
+#rules ul li{
+    margin: 10px 0;
+}
+
+.light_blue{
+    color: #5555ff;
+}
+
+.bold{
+    font-weight: bold;
+    color: #aaaaaa;
+}
+
+.em{
+    color: #ff5555;
+    font-weight: bold;
+}
+
+.em2{
+    color: #55ff55;
+    font-weight: bold;
+}
+
+small{
+    max-width: 60%;
+}
+
+#body form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+#body form div{
+    display: flex;
+    align-items: center;
+}
+
+#body form input[type=checkbox]{
+    appearance: none;
+    background-image: url(imgs/checkbox.png);
+    background-size: cover;
+    background-position: center;
+    border: none;
+    width: 20px;
+    height: 20px;
+}
+
+#body form input[type=checkbox]:hover{
+    cursor: pointer;
+    filter: brightness(1.5);
+}
+
+#body form input[type=checkbox]:active{
+    background-image: url(imgs/checkbox_highlighted.png);
+}
+
+#body form input[type=checkbox]:checked{
+    background-image: url(imgs/checkbox_selected.png);
+}
+
+#body form input[type=checkbox]:checked:active{
+    background-image: url(imgs/checkbox_selected_highlighted.png);
+}
+
+#body form button{
+    position: relative;
+    border: none;
+    color: white;
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#body form button:active img{
+    content: url(imgs/button_highlighted.png);
+}
+
+#body form button img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#body form button span{
+    position: relative;
+    z-index: 1;
+}
