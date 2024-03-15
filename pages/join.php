@@ -1,11 +1,11 @@
 <?php
-    require_once "ressources/login_fonctions.php";
-    require_once "ressources/fonctions.php";
+    require_once "../ressources/login_fonctions.php";
+    require_once "../ressources/fonctions.php";
 
     session_start();
 
     if (!isset($_SESSION['user'])){
-        header("Location: index.php");
+        header("Location: ../index.php");
     }
 
     if (isset($_POST['agree'])){
@@ -24,7 +24,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haggerim</title>
-    <link rel="stylesheet" href="style-join.css">
+    <link rel="stylesheet" href="../styles/join.css">
 </head>
 <body>
     <div id="background">
@@ -32,13 +32,8 @@
     </div>
     
     <header>
-        <script>
-        function changePage() {
-            window.location.href = "home.php";
-        }
-        </script>
-        <img src="imgs/Haggerim_logo.png" alt="Le logo d'Haggerim" onclick="changePage()">
-        <span><img src="imgs/user_modif.png" alt="Tête de Steeve dans Minecraft"></span>
+        <img src="../imgs/Haggerim_logo.png" alt="Le logo d'Haggerim" onclick="changePage()">
+        <span><img src="../imgs/user_modif.png" alt="Tête de Steeve dans Minecraft"></span>
     </header>
 
     <div id="body">
@@ -68,10 +63,12 @@
                 <label for="agree">J'ai lu et j'accepte le règlement</label>
             </div>
             <button name="validate">
-                <img src="imgs/button.png" alt="">
+                <img src="../imgs/button.png" alt="">
                 <span>Rejoindre l'aventure</span>
             </button>
         </form>
     </div>
+
+    <script src="../scripts/join.js"></script>
 </body>
 </html>

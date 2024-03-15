@@ -1,6 +1,6 @@
 <?php
 
-    require_once "bdd.php";
+    require_once 'bdd.php';
 
     function add_joining_request(string $id){
         $bdd = new BDD();

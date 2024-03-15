@@ -1,10 +1,11 @@
 <?php
+
     require_once 'ressources/login_fonctions.php';
 
     session_start();
 
     if (isset($_SESSION['user'])){
-        header("Location: home.php");
+        header("Location: pages/home.php");
     }
 
     $check = false;
@@ -13,7 +14,7 @@
 
         if (try_login($_POST['id'], $_POST['pw'])){
             $_SESSION['user'] = get_user($_POST['id']);
-            header("Location: home.php");
+            header("Location: pages/home.php");
         }
     }
 
@@ -45,7 +46,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haggerim Connexion</title>
-    <link rel="stylesheet" href="style-index.css">
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
     <div id="background">

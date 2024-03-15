@@ -1,6 +1,6 @@
 <?php
 
-require_once "bdd.php";
+require_once 'bdd.php';
 
 function try_login(string $id, string $pw){
     $bdd = new BDD();
