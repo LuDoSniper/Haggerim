@@ -1,0 +1,244 @@
+@import url('https://fonts.cdnfonts.com/css/minecraftia');
+
+*{
+    font-family: 'Minecraftia', sans-serif;
+}
+
+#background{
+    position: fixed;
+    background-image: url(../imgs/Logo_serveur_carre.png);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.blur{
+    background-image: url(../imgs/Logo_serveur_carre.png);
+    background-size: cover;
+    position: fixed;
+    filter: blur(10px);
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    margin: 0;
+}
+
+header{
+    position: sticky;
+    background-color: rgb(255, 255, 255, .3);
+    text-align: center;
+    padding: 5px 0;
+    padding-top: 7px;
+    top: 0;
+    z-index: 10;
+}
+
+header > img{
+    width: 200px;
+    cursor: pointer;
+}
+
+header span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../imgs/grass_block.png);
+    background-size: cover;
+    background-position: center;
+    height: 38px;
+    width: 38px;
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    border-radius: 4px;
+}
+
+header span img{
+    width: 75%;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+header span img:hover{
+    width: 90%;
+}
+
+#body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.main-title{
+    display: inline-block;
+    background-image: url(../imgs/dirt_block.png);
+    background-size: contain;
+    background-repeat: repeat;
+    position: relative;
+    z-index: 1;
+    border-radius: 8px;
+    box-shadow: inset 0px 0px 25px 6px rgba(0,0,0,0.6);
+    padding: 10px;
+    margin: 40px auto;
+}
+
+.main-title .noir{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 8px;
+}
+
+h1{
+    position: relative;
+    z-index: 2;
+    color: white;
+    margin: 0;
+}
+
+h1 span{
+    color: #5555ff;
+}
+
+h2{
+    margin: auto;
+}
+
+.quartz{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(../imgs/quartz_block_top.png);
+    background-size: calc(20px * 4);
+    width: 75%;
+    margin: auto;
+    border-radius: 8px;
+    padding: 20px 0;
+    margin-bottom: 50px;
+}
+
+.quartz h2{
+    margin-bottom: 20px;
+}
+
+.quartz table{
+    width: 90%;
+}
+
+.quartz table thead{
+    font-weight: bold;
+}
+
+.quartz table thead tr{
+    position: relative;
+    text-align: center;
+}
+
+.quartz table thead tr td:first-child::before{
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 4px;
+    background-color: gray;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px;
+}
+
+.quartz table .button{
+    background-color: rgb(41, 118, 233);
+    border: solid 2px rgb(29, 92, 185);
+    border-radius: 4px;
+    font-size: 0px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    user-select: none;
+    z-index: 3;
+}
+
+.quartz table .button .menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(92, 152, 241);
+    border: solid 2px rgb(49, 123, 233);
+    z-index: 3;
+    width: 75%;
+    height: 140%;
+    color: rgb(216, 216, 216);
+    border-radius: 4px;
+    transform: translate(100%, calc(-100% - 5px));
+    display: none;
+    user-select: none;
+}
+
+.quartz table .button .menu span{
+    position: relative;
+    z-index: 2;
+    font-size: 16px;
+    display: block;
+    padding-left: 5px;
+    user-select: none;
+}
+
+.quartz table .button .menu span:hover{
+    background-color: rgb(78, 138, 226);
+}
+
+.quartz table .button .left{
+    font-size: 16px;
+    color: rgb(216, 216, 216);
+    display: inline-block;
+    padding: 5px 10px;
+    user-select: none;
+    text-align: center;
+    width: 112px;
+}
+
+.quartz table .button .left:hover{
+    background-color: rgb(34, 106, 212);
+}
+
+.quartz table .button .right{
+    font-size: 16px;
+    color: rgb(216, 216, 216);
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    user-select: none;
+    z-index: 3;
+}
+
+.quartz table .button .right:hover{
+    background-color: rgb(34, 106, 212);
+}
+
+.quartz table .button .right::before{
+    content: '';
+    width: 2px;
+    height: 90%;
+    background-color: rgb(29, 92, 185);
+    border-radius: 4px;
+    position: absolute;
+    left: -1px;
+    top: 2.5px;
+}
+
+#overlay{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: none;
+}
