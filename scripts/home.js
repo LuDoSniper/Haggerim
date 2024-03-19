@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
             bulle.innerText = "En cours de développement";
         } else if (element.classList.contains('not-member')){
             bulle.innerText = "Vous ne faites pas partie d'Haggerim";
+        } else if (element.classList.contains('member')){
+            bulle.innerText = "Vous faites déjà parti d'Haggerim";
         }
     }
 

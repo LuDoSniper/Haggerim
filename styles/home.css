@@ -157,9 +157,28 @@ header span img:hover{
     scrollbar-color: #888888 transparent;
 }
 
-#menu .centent .body::-webkit-scrollbar-thumb{
+#menu .content .body::-webkit-scrollbar-thumb{
     background-image: url(../imgs/dirt_block.png);
     background-size: cover;
+}
+
+#menu .content .body a{
+    text-decoration: none;
+}
+
+#menu .content .body div{
+    border-radius: 4px;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.modo{
+    color: #aa0000;
+}
+
+#menu .content .body div:hover{
+    background-color: rgb(0, 0, 0, .15);
 }
 
 #close span{

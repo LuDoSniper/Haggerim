@@ -83,7 +83,7 @@
         <form action="index.php" method="post">
             <div class="inputs">
                 <input type="text" name="username" placeholder="Pseudo Minecraft">
-                <input type="email" name="email" placeholder="Email">
+                <input type="text" name="email" placeholder="Email">
                 <input type="password" name="password" placeholder="Mot de passe">
             </div>
             <div class="buttons">

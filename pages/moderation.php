@@ -4,7 +4,7 @@
 
     session_start();
 
-    if (!isset($_SESSION['user'])){
+    if (!isset($_SESSION['user']) || $_SESSION['user']['moderator_level'] < 1){
         header("Location: ../index.php");
     }
 

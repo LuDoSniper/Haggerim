@@ -43,7 +43,9 @@
                 <div id="close"><span class="material-symbols-outlined">close</span></div>
             </div>
             <div class="body">
-                <div>Je suis un element</div>
+                <?php if ($_SESSION['user']['moderator_level'] > 0) { ?>
+                <a href="moderation.php"><div><span class="modo">Espace modérateur</span></div></a>
+                <?php } ?>
                 <div>Je suis un autre element</div>
                 <div>Je suis un autre element</div>
                 <div>Je suis un autre element</div>
@@ -89,7 +91,9 @@
         </div>
 
         <div id="features">
-            <form action="join.php" method="post"><button>Rejoindre Haggerim</button></form>
+            <form action="join.php" method="post">
+                <button class="info-bulle member" <?php if ($member === "") {echo 'disabled';} ?>>Rejoindre Haggerim</button>
+            </form>
             <button class="info-bulle <?= $member ?>" <?= $state ?>>Gestion des royaumes</button>
             <button class="info-bulle dev" disabled>Hall of Haggerim's beauties</button>
             <button class="info-bulle <?= $member ?>" <?= $state ?>>Signaler un joueur</button>
