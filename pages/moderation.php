@@ -33,6 +33,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modération</title>
     <link rel="stylesheet" href="../styles/moderation.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
     <div id="overlay"></div>
@@ -43,8 +44,23 @@
     
     <header>
         <img src="../imgs/Haggerim_logo.png" alt="Le logo d'Haggerim" onclick="changePage()">
-        <span><img src="../imgs/user_modif.png" alt="Tête de Steeve dans Minecraft"></span>
+        <span id="profil"><img src="../imgs/user_modif.png" alt="Tête de Steeve dans Minecraft"></span>
     </header>
+
+    <div id="menu">
+        <div class="content">
+            <div class="header">
+                <div id="close"><span class="material-symbols-outlined">close</span></div>
+            </div>
+            <div class="body">
+                <?php if ($_SESSION['user']['moderator_level'] > 0) { ?>
+                <a href="moderation.php"><div><span class="modo">Espace modérateur</span></div></a>
+                <?php } ?>
+                <a href="home.php"><div><span>Page principale</span></div></a>
+                <a href="profile.php"><div><span>Mon profil</span></div></a>
+            </div>
+        </div>
+    </div>
 
     <div id="body">
         <div class="main-title">
