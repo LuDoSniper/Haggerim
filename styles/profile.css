@@ -1,12 +1,8 @@
 @import url('https://fonts.cdnfonts.com/css/minecraftia');
 
-/* @font-face{
-    font-family: 'Minecraft';
-    src: url(fonts/minecraft/minecraft_font.woff) format('woff');
-} */
-
 *{
     font-family: 'Minecraftia';
+    box-sizing: border-box;
 }
 
 #background{
@@ -28,6 +24,7 @@
 
 body{
     margin: 0;
+    min-height: 100vh;
 }
 
 header{
@@ -40,6 +37,7 @@ header{
 
 header > img{
     width: 200px;
+    cursor: pointer;
 }
 
 header span{
@@ -192,87 +190,84 @@ header span img:hover{
 }
 
 #body{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    z-index: 1;
-}
-
-.main-title{
-    display: inline-block;
-    background-image: url(../imgs/dirt_block.png);
-    background-size: contain;
-    background-repeat: repeat;
-    position: relative;
-    z-index: 1;
-    border-radius: 8px;
-    box-shadow: inset 0px 0px 25px 6px rgba(0,0,0,0.6);
-    padding: 10px;
-    margin: 40px auto;
-}
-
-.main-title .noir{
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.3);
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    border-radius: 8px;
-}
-
-h1{
     position: relative;
     z-index: 2;
-    color: white;
-    margin: 0;
 }
 
-h1 span{
-    color: #5555ff;
-}
-
-#features{
-    display: flex;
-    flex-direction: column;
-    z-index: 1;
-}
-
-#features form{
-    display: flex;
-    justify-content: center;
-}
-
-#features button{
-    position: relative;
-    color: white;
-    background-image: url(../imgs/button.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: none;
-    cursor: pointer;
-    margin: 20px auto;
-    width: calc(200px * 2);
-    height: calc(20px * 2);
-}
-
-#features button:disabled{
-    background-image: url(../imgs/button_disabled.png);
-    cursor: auto;
-}
-
-#features button:active:not(:disabled){
-    background-image: url(../imgs/button_highlighted.png);
-}
-
-#info-bulle{
-    background-color: rgb(6, 0, 49);
-    border: solid 4px black;
+#body #infos-container{
+    background-image: url(../imgs/dirt_block.png);
+    background-size: calc(20px * 4);
     border-radius: 8px;
+    width: 50%;
+    padding: 10px;
+    margin: 50px auto;
+    text-align: center;
     color: white;
+    position: relative;
+}
+
+#body #infos-container::before{
+    content: '';
     position: absolute;
-    pointer-events: none;
-    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, .3);
+    z-index: 0;
+}
+
+#body #infos-container form{
+    position: relative;
     z-index: 1;
+}
+
+#body #infos-container input{
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+}
+
+#body #infos-container button{
+    padding: 5px 10px;
+    padding-bottom: 7px;
+    border: 0;
+    position: relative;
+    cursor: pointer;
+    width: 45%;
+    color: white;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#body #infos-container button:active img{
+    content: url(../imgs/button_highlighted.png);
+}
+
+#body #infos-container button img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+}
+
+#body #infos-container button span{
+    position: relative;
+    z-index: 1;
+    font-size: 16px;
+}
+
+.error, .succes{
+    display: block;
+}
+
+.error{
+    color: #ff5555;
+}
+
+.succes{
+    color: #55ff55;
 }

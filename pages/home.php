@@ -46,40 +46,7 @@
                 <?php if ($_SESSION['user']['moderator_level'] > 0) { ?>
                 <a href="moderation.php"><div><span class="modo">Espace modérateur</span></div></a>
                 <?php } ?>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
-                <div>Je suis un autre element</div>
+                <a href="profile.php"><div><span>Mon profil</span></div></a>
             </div>
         </div>
     </div>
