@@ -71,3 +71,21 @@
 
         return $members;
     }
+
+    function change_username(int $id, string $username){
+        $bdd = new BDD();
+        $update = $bdd->get_bdd()->prepare("UPDATE users SET username = ? WHERE ID = ?");
+        $update->execute([$username, $id]);
+    }
+
+    function change_email(int $id, string $email){
+        $bdd = new BDD();
+        $update = $bdd->get_bdd()->prepare("UPDATE users SET email = ? WHERE ID = ?");
+        $update->execute([$email, $id]);
+    }
+
+    function change_password(int $id, string $password){
+        $bdd = new BDD();
+        $update = $bdd->get_bdd()->prepare("UPDATE users SET `password` = ? WHERE ID = ?");
+        $update->execute([$password, $id]);
+    }

@@ -1,4 +1,6 @@
 <?php
+    require_once "../ressources/fonctions.php";
+
     session_start();
 
     if (!isset($_SESSION['user'])){
@@ -18,6 +20,7 @@
                 $username_message = "<span class=\"error\">Les noms d'utilisateurs ne sont pas les mêmes !</span>";
             } else {
                 $username_message = "<span class=\"succes\">Le nom d'utilisateur à bien été changé.</span>";
+                change_username($_SESSION['user']['ID'], $username1);
             }
         }
 
@@ -26,6 +29,7 @@
                 $email_message = "<span class=\"error\">Les adresses mail ne sont pas les mêmes !</span>";
             } else {
                 $email_message = "<span class=\"succes\">L'addresse mail à bien été changé.</span>";
+                change_email($_SESSION['user']['ID'], $email1);
             }
         }
 
@@ -34,6 +38,7 @@
                 $password_message = "<span class=\"error\">Les mots de passes ne sont pas les mêmes !</span>";
             } else {
                 $password_message = "<span class=\"succes\">Le mot de passe à bien été changé.</span>";
+                change_password($_SESSION['user']['ID'], password_hash($password1, PASSWORD_BCRYPT));
             }
         }
     }
