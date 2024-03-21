@@ -21,6 +21,7 @@
             } else {
                 $username_message = "<span class=\"succes\">Le nom d'utilisateur à bien été changé.</span>";
                 change_username($_SESSION['user']['ID'], $username1);
+                $_SESSION['user']['username'] = $username1;
             }
         }
 
@@ -30,6 +31,7 @@
             } else {
                 $email_message = "<span class=\"succes\">L'addresse mail à bien été changé.</span>";
                 change_email($_SESSION['user']['ID'], $email1);
+                $_SESSION['user']['email'] = $email1;
             }
         }
 
@@ -39,6 +41,7 @@
             } else {
                 $password_message = "<span class=\"succes\">Le mot de passe à bien été changé.</span>";
                 change_password($_SESSION['user']['ID'], password_hash($password1, PASSWORD_BCRYPT));
+                $_SESSION['user']['password'] = password_hash($password1, PASSWORD_BCRYPT);
             }
         }
     }
@@ -80,9 +83,26 @@
     </div>
 
     <div id="body">
+        <div id="my-profile">
+            <h1>Mon profil</h1>
+            <div class="infos">
+                <div class="username">
+                    <span>Identifiant :</span>
+                    <span><?= $_SESSION['user']['username'] ?></span>
+                </div>
+                <div class="email">
+                    <span>Adresse mail :</span>
+                    <span><?= $_SESSION['user']['email'] ?></span>
+                </div>
+                <div class="password">
+                    <span>Mot de passe :</span>
+                    <span>*********</span>
+                </div>
+            </div>
+        </div>
         <div id="infos-container">
             <form action="profile.php" method="post">
-                <h1>Mon profil</h1>
+                <h1>Modifier mon profil</h1>
                 <?php if (isset($username_message)) {echo $username_message;} ?>
                 <?php if (isset($email_message)) {echo $email_message;} ?>
                 <?php if (isset($password_message)) {echo $password_message;} ?>

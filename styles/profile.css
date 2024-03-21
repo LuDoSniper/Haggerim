@@ -215,6 +215,7 @@ header span img:hover{
     height: 100%;
     background-color: rgb(0, 0, 0, .3);
     z-index: 0;
+    border-radius: 8px;
 }
 
 #body #infos-container form{
@@ -270,4 +271,41 @@ header span img:hover{
 
 .succes{
     color: #55ff55;
+}
+
+#my-profile{
+    background-image: url(../imgs/dirt_block.png);
+    background-size: calc(20px * 4);
+    padding: 50px;
+    padding-top: 15px;
+    border-radius: 8px;
+    margin: auto;
+    margin-top: 50px;
+    width: 50%;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+#my-profile::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, .3);
+    z-index: 0;
+    border-radius: 8px;
+}
+
+#my-profile *{
+    position: relative;
+    z-index: 1;
+}
+
+#my-profile .infos{
+    text-align: left;
+    width: 80%;
+    margin: auto;
 }
