@@ -69,6 +69,7 @@
                 <?php } ?>
                 <a href="home.php"><div><span>Page principale</span></div></a>
                 <a href="profile.php"><div><span>Mon profil</span></div></a>
+                <a href="../index.php?logout"><div><span>Se déconnecter</span></div></a>
             </div>
         </div>
     </div>
