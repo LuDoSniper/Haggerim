@@ -1,0 +1,33 @@
+{% extends 'Layout/base.html.twig' %}
+
+{% block title %}
+    Haggerim | Login
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('static/src/css/page/authentication/login.css') }}">
+{% endblock %}
+
+{% block main %}
+    <div id="login-container">
+        <h1>Se connecter</h1>
+        <span id="message"></span>
+        {{ form_start(form) }}
+            {{ form_widget(form._username) }}
+            {{ form_widget(form._password) }}
+            <div class="remember_me">
+                {{ form_label(form._remember_me) }}
+                {{ form_widget(form._remember_me) }}
+            </div>
+            <div class="spacer"></div>
+            <button>
+                <img src="{{ asset('static/img/button.png') }}" alt="Bouton minecraft">
+                <span>Se connecter</span>
+            </button>
+            <a href="{{ path('app_register') }}">
+                <img src="{{ asset('static/img/button.png') }}" alt="Bouton minecraft">
+                <span>Créer un compte</span>
+            </a>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
