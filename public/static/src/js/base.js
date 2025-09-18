@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Menu
-    function afficherMenu(){
-        document.getElementById('menu').classList.add('active');
+    // Sidebar
+    function showSidebar(){
+        document.getElementById('sidebar').classList.add('active');
     }
 
-    function cacherMenu(){
-        document.getElementById('menu').classList.remove('active');
+    function hideSidebar(){
+        document.getElementById('sidebar').classList.remove('active');
     }
 
-    document.getElementById('profil').addEventListener('click', afficherMenu);
-    document.querySelector('#close span').addEventListener('click', cacherMenu);
+    document.getElementById('profil').addEventListener('click', showSidebar);
+    document.querySelector('#close span').addEventListener('click', hideSidebar);
 
     // Info bulle
     function changeText(element, bulle){
@@ -22,10 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    var elements = Array.from(document.getElementsByClassName('info-bulle'));
-    var bulle = document.getElementById('info-bulle');
+    const elements = Array.from(document.querySelectorAll('.info-bulle'));
+    const bulle = document.getElementById('info-bulle');
 
-    elements.forEach(function (element) {
+    elements.forEach((element) => {
         if (element.hasAttribute('disabled')){
             element.addEventListener('mouseover', function(){
                 bulle.style.display = 'block';

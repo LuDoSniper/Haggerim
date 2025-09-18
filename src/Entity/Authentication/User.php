@@ -2,6 +2,7 @@
 
 namespace App\Entity\Authentication;
 
+use App\Entity\Member\Request;
 use App\Repository\Authentication\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
@@ -32,6 +33,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?string $password = null;
 
     private ?string $plainPassword = null;
+
+    #[ORM\OneToOne(mappedBy: 'requester', cascade: ['persist', 'remove'])]
+    private ?Request $request = null;
 
     public function getId(): ?int
     {
@@ -102,5 +106,22 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // @deprecated, to be removed when upgrading to Symfony 8
         $plainPassword = null;
+    }
+
+    public function getRequest(): ?Request
+    {
+        return $this->request;
+    }
+
+    public function setRequest(Request $request): static
+    {
+        // set the owning side of the relation if necessary
+        if ($request->getRequester() !== $this) {
+            $request->setRequester($this);
+        }
+
+        $this->request = $request;
+
+        return $this;
     }
 }

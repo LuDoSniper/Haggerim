@@ -1,0 +1,115 @@
+#my-profile{
+    background-image: url("/static/img/dirt_block.png");
+    background-size: calc(20px * 4);
+    padding: 50px;
+    padding-top: 15px;
+    border-radius: 8px;
+    margin: auto;
+    margin-top: 50px;
+    width: 50%;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+#my-profile::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, .3);
+    z-index: 0;
+    border-radius: 8px;
+}
+
+#my-profile *{
+    position: relative;
+    z-index: 1;
+}
+
+#my-profile .infos{
+    text-align: left;
+    width: 80%;
+    margin: auto;
+}
+
+#infos-container{
+    background-image: url("/static/img/dirt_block.png");
+    background-size: calc(20px * 4);
+    border-radius: 8px;
+    width: 50%;
+    padding: 10px;
+    margin: 50px auto;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+#infos-container::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, .3);
+    z-index: 0;
+    border-radius: 8px;
+}
+
+#infos-container form{
+    position: relative;
+    z-index: 1;
+}
+
+#infos-container input{
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+}
+
+#infos-container button{
+    padding: 5px 10px;
+    padding-bottom: 7px;
+    border: 0;
+    position: relative;
+    cursor: pointer;
+    width: 45%;
+    color: white;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#infos-container button:active img{
+    content: url("/static/img/button_highlighted.png");
+}
+
+#infos-container button img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+}
+
+#infos-container button span{
+    position: relative;
+    z-index: 1;
+    font-size: 16px;
+}
+
+.error, .succes{
+    display: block;
+}
+
+.error{
+    color: #ff5555;
+}
+
+.succes{
+    color: #55ff55;
+}

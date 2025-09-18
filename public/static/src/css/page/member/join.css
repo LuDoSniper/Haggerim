@@ -1,0 +1,176 @@
+#body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    position: relative;
+}
+
+.main-title{
+    display: inline-block;
+    background-image: url("/static/img/dirt_block.png");
+    background-size: contain;
+    background-repeat: repeat;
+    position: relative;
+    z-index: 1;
+    border-radius: 8px;
+    box-shadow: inset 0px 0px 25px 6px rgba(0,0,0,0.6);
+    padding: 10px;
+    margin: 40px auto;
+}
+
+.noir{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 8px;
+}
+
+h1{
+    position: relative;
+    z-index: 2;
+    color: white;
+    margin: 0;
+}
+
+h1 span{
+    color: #5555ff;
+}
+
+#rule-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+#rules{
+    position: relative;
+    background-image: url("/static/img/dirt_block.png");
+    background-size: 75px;
+    background-repeat: repeat;
+    border-radius: 8px;
+    color: white;
+    box-shadow: inset 0 0 25px 6px rgba(0,0,0,0.6);
+    padding: 12px 12px 12px 24px;
+}
+
+#rules .noir{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#rules ul{
+    position: relative;
+    z-index: 2;
+    padding-left: 15px;
+}
+
+#rules ul li{
+    margin: 10px 0;
+}
+
+.light_blue{
+    color: #5555ff;
+}
+
+.bold{
+    font-weight: bold;
+    color: #aaaaaa;
+}
+
+.em{
+    color: #ff5555;
+    font-weight: bold;
+}
+
+.em2{
+    color: #55ff55;
+    font-weight: bold;
+}
+
+small{
+    color: black;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+form div{
+    display: flex;
+    align-items: center;
+}
+
+#accept {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: black;
+}
+
+#accept label {
+    user-select: none;
+    cursor: pointer;
+}
+
+form input[type=checkbox]{
+    appearance: none;
+    background-image: url("/static/img/checkbox.png");
+    background-size: cover;
+    background-position: center;
+    border: none;
+    width: 20px;
+    height: 20px;
+}
+
+form input[type=checkbox]:hover{
+    cursor: pointer;
+    filter: brightness(1.5);
+}
+
+form input[type=checkbox]:active{
+    background-image: url("/static/img/checkbox_highlighted.png");
+}
+
+form input[type=checkbox]:checked{
+    background-image: url("/static/img/checkbox_selected.png");
+}
+
+form input[type=checkbox]:checked:active{
+    background-image: url("/static/img/checkbox_selected_highlighted.png");
+}
+
+form button{
+    position: relative;
+    border: none;
+    color: white;
+    width: 100%;
+    margin: 50px auto auto;
+    padding: 10px;
+    cursor: pointer;
+}
+
+form button:active img{
+    content: url("/static/img/button_highlighted.png");
+}
+
+form button img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+form button span{
+    position: relative;
+    z-index: 1;
+}

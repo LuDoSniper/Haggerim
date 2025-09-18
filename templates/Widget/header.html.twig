@@ -1,0 +1,7 @@
+{% set profile = profile|default(true) %}
+<header>
+    <a href="{{ path('app_home') }}"><img src="{{ asset('static/img/Haggerim_logo.png') }}" alt="Le logo d'Haggerim"></a>
+    {% if profile %}
+        <span id="profil"><img src="{{ asset('static/img/user_modif.png') }}" alt="Tête de Steeve dans Minecraft"></span>
+    {% endif %}
+</header>

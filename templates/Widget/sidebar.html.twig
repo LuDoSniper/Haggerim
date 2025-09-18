@@ -1,0 +1,15 @@
+<div id="sidebar">
+    <div class="content">
+        <div class="header">
+            <div id="close"><span class="material-symbols-outlined">close</span></div>
+        </div>
+        <div class="body">
+            {% if 'ROLE_ADMIN' in roles %}
+                <a href="moderation.php"><div><span class="modo">Espace modérateur</span></div></a>
+            {% endif %}
+            <a href="{{ path('app_home') }}"><div><span>Page principale</span></div></a>
+            <a href="{{ path('app_member_profile') }}"><div><span>Mon profil</span></div></a>
+            <a href="{{ path('_logout_main') }}"><div><span>Se déconnecter</span></div></a>
+        </div>
+    </div>
+</div>

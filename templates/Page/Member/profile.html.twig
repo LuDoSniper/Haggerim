@@ -1,0 +1,59 @@
+{% extends 'Layout/base.html.twig' %}
+
+{% block title %}
+    Haggerim | Profil
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('static/src/css/page/member/profile.css') }}">
+{% endblock %}
+
+{% block main %}
+    <div id="my-profile">
+        <h1>Mon profil</h1>
+        <div class="infos">
+            <div class="username">
+                <span>Identifiant :</span>
+                <span><?= $_SESSION['user']['username'] ?></span>
+            </div>
+            <div class="email">
+                <span>Adresse mail :</span>
+                <span><?= $_SESSION['user']['email'] ?></span>
+            </div>
+            <div class="password">
+                <span>Mot de passe :</span>
+                <span>*********</span>
+            </div>
+        </div>
+    </div>
+    <div id="infos-container">
+        <form action="profile.php" method="post">
+            <h1>Modifier mon profil</h1>
+            <?php if (isset($username_message)) {echo $username_message;} ?>
+            <?php if (isset($email_message)) {echo $email_message;} ?>
+            <?php if (isset($password_message)) {echo $password_message;} ?>
+            <div id="username">
+                <h2>Identifiant :</h2>
+                <input type="text" name="username1" placeholder="Pseudo Minecraft">
+                <input type="text" name="username2" placeholder="Répéter le pseudo Minecraft">
+            </div>
+            <div id="email">
+                <h2>Email :</h2>
+                <input type="text" name="email1" placeholder="Email">
+                <input type="text" name="email2" placeholder="Répéter l'email">
+            </div>
+            <div id="password">
+                <h2>Mot de passe :</h2>
+                <input type="password" name="password1" placeholder="Mot de passe">
+                <input type="password" name="password2" placeholder="Répéter le mot de passe">
+            </div>
+            <button id="change" name="change">
+                <img src="{{ asset('static/img/button.png') }}" alt="Bouton Minecraft">
+                <span>Changer mes informations</span>
+            </button>
+        </form>
+    </div>
+
+    <script src="../scripts/profile.js"></script>
+{% endblock %}
+

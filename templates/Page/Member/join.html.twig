@@ -1,0 +1,55 @@
+{% extends 'Layout/base.html.twig' %}
+
+{% block title %}
+    Haggerim | Rejoindre
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="{{ asset('static/src/css/page/member/join.css') }}">
+    <link rel="stylesheet" href="{{ asset('static/src/css/widget/sidebar.css') }}">
+{% endblock %}
+
+{% block main %}
+
+    {% include 'Widget/sidebar.html.twig' with {
+        'roles': roles
+    } %}
+
+    <div class="main-title">
+        <div class="noir"></div>
+        <h1>Rejoindre le monde d'<span>Haggerim</span></h1>
+    </div>
+
+    <div id="rule-container">
+        <div id="rules">
+            <div class="noir"></div>
+            <ul>
+                <li>Toutes constructions, qu'elles soient sous terre ou non, toutes fermes, automatisations, systèmes de redstone, etc, <span class="bold">doivent</span> être dans un esprit <span class="em2">médiéval fantastique</span>.</li>
+                <li>Le monde environnant <span class="bold">doit</span> être respecté et rester visuellement <span class="em">naturel</span> (hors constructions).</li>
+                <li>Toutes structures appartenant à un autre joueur, <span class="bold">doit</span> rester <span class="em">tel quel</span> sauf mention contraire.</li>
+                <li>Toutes revendications de <span class="em">délimitation</span>, <span class="em">création</span>, <span class="em">suppression</span> de <span class="light_blue">royaume</span>, ou de <span class="light_blue">zone</span>, <span class="bold">doivent</span> passer au moins par le site officiel d'<span class="light_blue">Haggerim</span>.</li>
+                <li>Tous les chats envoyés <span class="bold">doivent</span> rester <span class="em">respectueux</span> et <span class="em">consentis</span> par le(s) destinataire(s).</li>
+                <li>Toutes nuits passées dans une zone temporaires (lors d'une exploration par exemple) <span class="bold">doivent</span> être accompagnées de la construction d'un petit <span class="em">campement</span> (si aucun campement existant ne se trouve à proximité) <span class="bold">devant</span> contenir à minima un feu de camp. Ce campement <span class="bold">doit</Span> rester sur place ainsi que le ou les lits en question.</li>
+            </ul>
+        </div>
+        <small>Tout non-respect du règlement sera sanctionné et pourra entrainer un bannissement aussi bien temporaire que définitif.</small>
+    </div>
+    {{ form_start(form) }}
+        <div id="accept">
+            {{ form_widget(form.accept) }}
+            {{ form_label(form.accept) }}
+        </div>
+        {% if form.vars.submitted and form.accept.vars.errors|length %}
+            <small class="em" role="alert">
+                {% for e in form.accept.vars.errors %}
+                    {{ e.message }}{% if not loop.last %}<br>{% endif %}
+                {% endfor %}
+            </small>
+        {% endif %}
+        <button name="validate">
+            <img src="{{ asset('static/img/button.png') }}" alt="">
+            <span>Rejoindre l'aventure</span>
+        </button>
+    {{ form_end(form) }}
+{% endblock %}

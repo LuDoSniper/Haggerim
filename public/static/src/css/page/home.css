@@ -1,0 +1,87 @@
+#body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.main-title{
+    display: inline-block;
+    background-image: url("/static/img/dirt_block.png");
+    background-size: contain;
+    background-repeat: repeat;
+    position: relative;
+    z-index: 1;
+    border-radius: 8px;
+    box-shadow: inset 0px 0px 25px 6px rgba(0,0,0,0.6);
+    padding: 10px;
+    margin: 40px auto;
+}
+
+.main-title .noir{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 8px;
+}
+
+h1{
+    position: relative;
+    z-index: 2;
+    color: white;
+    margin: 0;
+}
+
+h1 span{
+    color: #5555ff;
+}
+
+#features{
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+#features form{
+    display: flex;
+    justify-content: center;
+}
+
+#features button{
+    position: relative;
+    color: white;
+    background-image: url("/static/img/button.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    margin: 20px auto;
+    width: calc(200px * 2);
+    height: calc(20px * 2);
+}
+
+#features button:disabled{
+    background-image: url("/static/img/button_disabled.png");
+    cursor: auto;
+}
+
+#features button:active:not(:disabled){
+    background-image: url("/static/img/button_highlighted.png");
+    transition: none;
+}
+
+#info-bulle{
+    background-color: rgb(6, 0, 49);
+    border: solid 4px black;
+    border-radius: 8px;
+    color: white;
+    position: absolute;
+    pointer-events: none;
+    display: none;
+    z-index: 1;
+    transition: none;
+}

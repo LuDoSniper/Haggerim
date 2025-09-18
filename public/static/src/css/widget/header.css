@@ -1,0 +1,36 @@
+header{
+    position: relative;
+    background-color: #FFFFFF4C;
+    text-align: center;
+    padding: 7px 0 5px;
+    z-index: 1;
+}
+
+header img {
+    width: 200px;
+}
+
+header span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/static/img/grass_block.png");
+    background-size: cover;
+    background-position: center;
+    height: 38px;
+    width: 38px;
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    border-radius: 4px;
+}
+
+header span img{
+    width: 75%;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+header span img:hover{
+    width: 90%;
+}
